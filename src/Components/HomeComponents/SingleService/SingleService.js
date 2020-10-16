@@ -18,18 +18,21 @@ const SingleService = ({ service }) => {
     }
 
     return (
-        <div onClick={handleOrder} className="col-md-4 mb-5 text-decoration-none">
+        <div onClick={handleOrder} className="col-md-4 mb-5 text-decoration-none d-flex justify-content-center">
             <animated.div
-                class="card"
+                className="card"
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
                 onMouseLeave={() => set({ xys: [0, 0, 1] })}
                 style={{ transform: props.xys.interpolate(trans) }}
             >
-                <div className="p-3 single-service">
-                    <img className="img-fluid mb-3" src={`data:image/png;base64,${service.image.img}`} alt="" />
-                    <h3 className="text-dark">{service.name}</h3>
-                    <p className="text-muted ">{service.description}</p>
+                <div style={{height: '45ch'}} className="d-flex align-items-center">
+                    <div className="p-3 single-service">
+                        <img className="img-fluid mb-3" src={`data:image/png;base64,${service.image.img}`} alt="" />
+                        <h3 className="text-dark">{service.name}</h3>
+                        <p className="text-muted ">{service.description}</p>
+                    </div>
                 </div>
+
             </animated.div>
         </div>
 
