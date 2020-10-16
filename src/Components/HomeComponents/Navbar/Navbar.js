@@ -16,6 +16,16 @@ const Navbar = () => {
         history.go(0);
     }
 
+    const handleUserDashboard = () => {
+        localStorage.setItem("active", JSON.stringify('order'));
+        history.replace('/dashboard/order');
+    }
+
+    const handleAdminDashboard = () => {
+        localStorage.setItem("active", JSON.stringify('all-order-list'));
+        history.replace('/dashboard/service-list-admin');
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
             <a className="navbar-brand ml-5" href="/"><img src="https://i.ibb.co/cgrXbTz/logo.png" alt="sdfsdf"/></a>
@@ -39,8 +49,8 @@ const Navbar = () => {
                     </li>
                     {name && <li><h5 className="nav-link mr-5"><img className="mr-3" style={{width: '30px', borderRadius: '50%'}} src={photoURL} alt=""/>{name}</h5></li>}
                      
-                    {isAdmin ? <Link to="/dashboard/service-list-admin"><button className="custom-btn mr-5">Dashboard</button></Link>
-                    : <Link to="/dashboard/order"><button className="custom-btn mr-5">Dashboard</button></Link>}
+                    {isAdmin ? <li><button onClick={handleAdminDashboard} className="custom-btn mr-5">Dashboard</button></li>
+                    : <li><button onClick={handleUserDashboard} className="custom-btn mr-5">Dashboard</button></li>}
                     
                     {name ? <Link to='/'><button onClick={handleLogOut} className="custom-btn mr-5">Logout</button></Link>
                     : <Link to="/login"><button className="custom-btn mr-5">Login</button></Link>}
