@@ -10,6 +10,7 @@ import NotFound from './Components/ExtraComponents/NotFound/NotFound';
 import Login from './Components/LoginComponents/Login/Login';
 import PrivateRoute from './Components/LoginComponents/PrivateRoute/PrivateRoute';
 import Dashboard from './Components/DashboardComponents/Dashboard/Dashboard';
+import Test from './Components/Test/Test';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    // <Test/>
   );
 }
 

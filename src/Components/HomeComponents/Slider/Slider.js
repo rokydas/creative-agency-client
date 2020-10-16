@@ -19,19 +19,36 @@ const Slider = () => {
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div className="carousel-inner">
-                <div className="carousel-item active col-md-5">
-                    <img className="img-fluid" src="https://i.ibb.co/Kb2G7FR/carousel-1.png" className="d-block w-100" alt="..." />
-                </div> 
-                <div className="carousel-item col-md-5">
-                    <img className="img-fluid" src="https://i.ibb.co/9bdQb9h/carousel-2.png" className="d-block w-100" alt="..." />
+                <div className="carousel-item active">
+                    <div className="row">
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/Kb2G7FR/carousel-1.png" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/9bdQb9h/carousel-2.png" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/bs9n5mn/carousel-3.jpg" alt="..." />
+                    </div>
                 </div>
-                <div className="carousel-item col-md-5">
-                    <img className="img-fluid" src="https://i.ibb.co/bs9n5mn/carousel-3.jpg" className="d-block w-100" alt="..." />
+                <div className="carousel-item">
+                    <div className="row">
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/9bdQb9h/carousel-2.png" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/bs9n5mn/carousel-3.jpg" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/MZQn82F/carousel-4.png" alt="..." />
+                    </div>
                 </div>
-                <div className="carousel-item col-md-5">
-                    <img className="img-fluid" src="https://i.ibb.co/MZQn82F/carousel-4.png" className="d-block w-100" alt="..." />
+                <div className="carousel-item">
+                    <div className="row">
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/bs9n5mn/carousel-3.jpg" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/MZQn82F/carousel-4.png" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/Kb2G7FR/carousel-1.png" alt="..." />
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <div className="row">
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/MZQn82F/carousel-4.png" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/Kb2G7FR/carousel-1.png" alt="..." />
+                        <img className="img-fluid col-md-4" src="https://i.ibb.co/9bdQb9h/carousel-2.png" alt="..." />
+                    </div>
                 </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -43,26 +60,7 @@ const Slider = () => {
                 <span className="sr-only">Next</span>
             </a>
         </div>
-        // <Slider {...settings}>
-        //     <div>
-        //         <h3>1</h3>
-        //     </div>
-        //     <div>
-        //         <h3>2</h3>
-        //     </div>
-        //     <div>
-        //         <h3>3</h3>
-        //     </div>
-        //     <div>
-        //         <h3>4</h3>
-        //     </div>
-        //     <div>
-        //         <h3>5</h3>
-        //     </div>
-        //     <div>
-        //         <h3>6</h3>
-        //     </div>
-        // </Slider>
+
     );
 };
 
