@@ -1,0 +1,8 @@
+.single-feedback {
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.single-feedback img {
+    width: 80px;
+}

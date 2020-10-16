@@ -1,0 +1,12 @@
+.header-text h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.custom-container {
+    margin: 10px 10%;
+}
+
+.header-img {
+    text-align: center;
+}

@@ -1,0 +1,12 @@
+.navbar-brand img {
+    width: 150px;
+}
+
+.custom-btn {
+    background-color: #111430;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+}
+
