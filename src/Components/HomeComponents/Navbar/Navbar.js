@@ -38,8 +38,9 @@ const Navbar = () => {
                         <a className="nav-link mr-5" href="#">Contact Us</a>
                     </li>
                     {name && <li><h5 className="nav-link mr-5"><img className="mr-3" style={{width: '30px', borderRadius: '50%'}} src={photoURL} alt=""/>{name}</h5></li>}
-                    
-                    {isAdmin && <Link to="/dashboard/service-list-admin"><button className="custom-btn mr-5">Dashboard</button></Link>}
+                     
+                    {isAdmin ? <Link to="/dashboard/service-list-admin"><button className="custom-btn mr-5">Dashboard</button></Link>
+                    : <Link to="/dashboard/order"><button className="custom-btn mr-5">Dashboard</button></Link>}
                     
                     {name ? <Link to='/'><button onClick={handleLogOut} className="custom-btn mr-5">Logout</button></Link>
                     : <Link to="/login"><button className="custom-btn mr-5">Login</button></Link>}

@@ -3,6 +3,7 @@ import OrderListUserSingle from '../OrderListUserSingle/OrderListUserSingle';
 
 const OrderListUser = () => {
 
+    const name = JSON.parse(localStorage.getItem("name"));
     const [orderList, setOrderList] = useState([]);
 
     useEffect(() => {
@@ -13,8 +14,12 @@ const OrderListUser = () => {
 
     return (
         <div>
-            <h3 className="mt-5">Your Order List</h3>
-            {orderList.length > 0 ? <div className="order-box">
+            <div className="mt-5 mr-5 d-flex justify-content-between">
+                <h3>Your Order List</h3>
+                <h3>{name}</h3>
+            </div>
+            {orderList.length > 0 ? 
+            <div className="order-box p-5">
                 <div className="row">
                     {
                         orderList.map((order => <OrderListUserSingle key={order._id} order={order} />))

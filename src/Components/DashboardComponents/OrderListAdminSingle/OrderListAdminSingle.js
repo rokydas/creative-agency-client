@@ -50,14 +50,17 @@ const OrderListAdminSingle = ({ order }) => {
                         className={classes.selectEmpty}
                         inputProps={{ 'aria-label': 'Without label' }}
                     >
-                        {/* <MenuItem value="">
-                            {order.status}
-                        </MenuItem> */}
-                        <MenuItem value={'Pending'}>Pending</MenuItem>
+                        <MenuItem value="">
+                            {order.status == 'Pending' && <span style={{ color: 'red' }}>Pending</span>}
+                            {order.status == 'Ongoing' && <span style={{ color: '#FFBD3E' }}>Ongoing</span>}
+                            {order.status == 'Done' && <span style={{ color: 'green' }}>Done</span>}
+                        </MenuItem>
+                        <MenuItem value={'Ongoing'}>Pending</MenuItem>
                         <MenuItem value={'Ongoing'}>Ongoing</MenuItem>
-                        <MenuItem value={'Done'}>Done</MenuItem>
+                        <MenuItem value={'Ongoing'}>Done</MenuItem>
+
+
                     </Select>
-                    <FormHelperText>Without label</FormHelperText>
                 </FormControl>
             </td>
         </tr>

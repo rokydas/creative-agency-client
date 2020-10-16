@@ -5,6 +5,8 @@ const Review = () => {
 
     const history = useHistory();
 
+    const name = JSON.parse(localStorage.getItem("name"));
+
     const [info, setInfo] = useState({});
 
     const photoURL = JSON.parse(localStorage.getItem("photoURL"));
@@ -38,7 +40,10 @@ const Review = () => {
 
     return (
         <div>
-            <h3 className="mt-5">Review</h3>
+            <div className="mt-5 mr-5 d-flex justify-content-between">
+                <h3>Your Order List</h3>
+                <h3>{name}</h3>
+            </div>
             <div className="order-box p-5 mt-5">
                 <form onSubmit={handleSubmit}>
                     <input onBlur={handleBlur} name="name" className="form-control" type="text" placeholder="Your name / company's name" required/><br />

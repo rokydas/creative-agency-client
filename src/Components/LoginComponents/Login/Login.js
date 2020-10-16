@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as firebase from "firebase/app";
 import "firebase/auth";
-import { useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { firebaseConfig } from './firebase.config';
 import './Login.css';
 
@@ -25,7 +25,7 @@ const Login = () => {
         let isAdmin;
         for (let i = 0; i < allAdmin.length; i++) {
             const element = allAdmin[i];
-            if(element.email == email) {
+            if (element.email == email) {
                 isAdmin = true;
                 break;
             }
@@ -64,7 +64,7 @@ const Login = () => {
 
     return (
         <div className="login">
-            <img className="img-fluid mt-5 pt-5" width="200px" src="https://i.ibb.co/cgrXbTz/logo.png" />
+            <Link to="/"><img className="img-fluid mt-5 pt-5" width="200px" src="https://i.ibb.co/cgrXbTz/logo.png" /></Link>
             <div className="login-box mt-5 p-5">
                 <h3>Login With</h3><br />
                 <button className="login-btn text-left" onClick={handleLogin}>

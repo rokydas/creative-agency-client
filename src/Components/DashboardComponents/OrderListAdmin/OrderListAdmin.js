@@ -5,6 +5,8 @@ const OrderListAdmin = () => {
 
     const [orderList, setOrderList] = useState([]);
 
+    const name = JSON.parse(localStorage.getItem("name"));
+
     useEffect(() => {
         fetch('https://creative-agency18.herokuapp.com/order')
             .then(res => res.json())
@@ -13,12 +15,15 @@ const OrderListAdmin = () => {
 
     return (
         <div>
-            <h3 className="mt-5">All Order List</h3>
+            <div className="mt-5 mr-5 d-flex justify-content-between">
+                <h3>All Order List</h3>
+                <h3>{name}</h3>
+            </div>
             {
                 orderList.length > 0 ?
                     <div className="order-box p-5 mt-5">
-                        <table className="table">
-                            <thead>
+                        <table className="table" style={{backgroundColor: 'white'}}>
+                            <thead style={{backgroundColor: '#F4F7FC'}}>
                                 <tr>
                                     <th>Name</th>
                                     <th>Email Id</th>

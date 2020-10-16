@@ -18,8 +18,10 @@ const Order = () => {
             .then(data => {
                 const myService = data.find(e => e._id === serviceId);
                 setOrderService(myService);
-                const myInfo = {...info};
-                myInfo.productName = myService.name;
+                const myInfo = { ...info };
+                if(myService) {
+                    myInfo.productName = myService.name;
+                }
                 setInfo(myInfo);
             });
     }, [])
@@ -56,22 +58,26 @@ const Order = () => {
             method: 'POST',
             body: formData
         })
-        .then(res => res.json())
-        .then(data => {
-            history.replace('/');
-            history.go(0);
-        });
+            .then(res => res.json())
+            .then(data => {
+                history.replace('/');
+                history.go(0);
+            });
         e.preventDefault();
     }
 
     return (
         <div>
-            <h3 className="mt-5">Order</h3>
+            <div className="mt-5 mr-5 d-flex justify-content-between">
+                <h3>Order</h3>
+                <h3>{name}</h3>
+            </div>
+
             <div className="order-box p-5 mt-5">
                 <form onSubmit={handleSubmit}>
-                    <input className="form-control" type="text" placeholder="Your name / company's name" value={name} required /><br />
-                    <input className="form-control" type="email" placeholder="Your email address" value={email} required /><br />
-                    <input className="form-control" type="text" placeholder="Product Name" value={orderService.name} required /><br />
+                    <input className="form-control" type="text" placeholder="Your name / company's name" value={name && name} required /><br />
+                    <input className="form-control" type="email" placeholder="Your email address" value={email && email} required /><br />
+                    <input onBlur={handleBlur} name="productName" className="form-control" type="text" placeholder="Product Name" value={orderService && orderService.name} required /><br />
                     <textarea onBlur={handleBlur} rows="5" className="form-control" type="text" name='productDetails' placeholder="Product Details" required /><br />
                     <input onBlur={handleBlur} className="form-control" type="number" name='price' placeholder="Price" required /><br />
                     <input onChange={handleFileChange} type="file" required /><br /><br />

@@ -12,7 +12,7 @@ const SingleFeedback = ({ feedback }) => {
     return (
         <div className="col-md-4 single-feedback mb-5 d-flex justify-content-center">
             <animated.div
-                class="card"
+                className="card"
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
                 onMouseLeave={() => set({ xys: [0, 0, 1] })}
                 style={{ transform: props.xys.interpolate(trans) }}
