@@ -31,7 +31,6 @@ const Login = () => {
             }
             else {
                 isAdmin = false;
-                break;
             }
         }
         localStorage.setItem("isAdmin", JSON.stringify(isAdmin));
