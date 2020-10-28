@@ -1,6 +1,6 @@
-# Creative Agency
+# Creative Agency Client
 
-It is an agency website, which serves some services like web development, graphics design, mobile application design, photography etc.
+It is an agency website, which serves some services like **web development, graphics design, mobile application design, photography** etc.
 In this website, two types of people can log in or sign up here. One is admin and another is user. One cannot go the dashboard page without login. After login, there are different dashboard option for user and admin. All the facilities of this website are listed here:
 - Admin can see all order lists of the users and change the order's status by drop down menu.
 - Admin can add more services
@@ -14,5 +14,5 @@ There are two github repository for this project. One is for server side and ano
 [Client side repo link](https://github.com/rokydas/creative-agency-client)
 [Server side repo link](https://github.com/rokydas/creative-agency-server)
 
-Technology for frond-end: HTML5, CSS3, Bootstrap4, React Js.
-Technology for back-end: MongoDB, Node Js, Express Js.
+**Technology for frond-end: HTML5, CSS3, Bootstrap4, React Js.**
+**Technology for back-end: MongoDB, Node Js, Express Js.**
